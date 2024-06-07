@@ -30,6 +30,10 @@
   </section>
 
   <section>
+    <WorkAbout />
+  </section>
+
+  <section>
     <div class="container px-4 py-16 md:py-24">
       <div class="text-primary text-center max-w-[730px] mx-auto">
         <h2
@@ -43,7 +47,7 @@
         </p>
         <router-link to="/contact_us">
           <button
-            class=" font-semibold rounded-3xl py-2 sm:py-3 lg:py-4 px-6 sm:px-8 lg:px-12 bg-[#FCD980] text-[#1B1C2B] hover:text-white transition duration-300 ease-in-out"
+            class="font-semibold rounded-3xl py-2 sm:py-3 lg:py-4 px-6 sm:px-8 lg:px-12 bg-[#FCD980] text-[#1B1C2B] hover:text-white transition duration-300 ease-in-out"
           >
             Contact Us
           </button>
@@ -54,6 +58,7 @@
 </template>
 
 <script setup>
+import WorkAbout from "../components/WorkAbout.vue";
 const items = [
   {
     icon: `<svg width="19" height="19" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -1,7 +1,9 @@
 <template>
   <div class="navbar fixed top-0 w-full z-50 bg-[#1C1E53]">
-    <div class="container mx-auto flex justify-between py-4 items-center">
-      <div>
+    <div
+      class="container mx-auto flex flex-wrap justify-between py-4 items-center"
+    >
+      <div class="w-full md:w-auto flex justify-between items-center">
         <a href="/">
           <svg
             width="122"
@@ -55,31 +57,63 @@
             </defs>
           </svg>
         </a>
+        <button
+          class="md:hidden flex items-center px-3 py-2 border rounded text-white border-white"
+          @click="toggleMenu"
+        >
+          <svg
+            class="fill-current h-3 w-3"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>Menu</title>
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+          </svg>
+        </button>
       </div>
-      <div class="flex gap-12 text-md font-medium items-center">
-        <router-link to="/" class="text-[#BBBBCB] hover:text-white"
-          >Home</router-link
+      <div
+        class="w-full md:flex md:items-center md:w-auto"
+        :class="{ hidden: !isMenuOpen, block: isMenuOpen }"
+      >
+        <div
+          class="flex flex-col md:flex-row md:gap-12 text-md font-medium items-center w-full md:w-auto"
         >
-        <router-link to="/about_us" class="text-[#BBBBCB] hover:text-white"
-          >About us</router-link
-        >
-        <router-link to="/pricing" class="text-[#BBBBCB] hover:text-white"
-          >Pricing</router-link
-        >
-        <router-link to="/work" class="text-[#BBBBCB] hover:text-white"
-          >Work</router-link
-        >
-        <router-link to="/blog" class="text-[#BBBBCB] hover:text-white"
-          >Blog</router-link
-        >
-        <div class="ml-auto items-center">
-          <router-link to="/contact_us">
-            <button
-              class="text-white border font-medium rounded-3xl border-gray-300 py-[16px] px-[48px] hover:bg-white hover:text-black"
-            >
-              Contact us
-            </button>
-          </router-link>
+          <router-link
+            to="/"
+            class="text-[#BBBBCB] hover:text-white py-2 md:py-0"
+            >Home</router-link
+          >
+          <router-link
+            to="/about_us"
+            class="text-[#BBBBCB] hover:text-white py-2 md:py-0"
+            >About us</router-link
+          >
+          <router-link
+            to="/pricing"
+            class="text-[#BBBBCB] hover:text-white py-2 md:py-0"
+            >Pricing</router-link
+          >
+          <router-link
+            to="/work"
+            class="text-[#BBBBCB] hover:text-white py-2 md:py-0"
+            >Work</router-link
+          >
+          <router-link
+            to="/blog"
+            class="text-[#BBBBCB] hover:text-white py-2 md:py-0"
+            >Blog</router-link
+          >
+          <div
+            class="mt-4 md:mt-0 md:ml-auto flex justify-center w-full md:w-auto"
+          >
+            <router-link to="/contact_us">
+              <button
+                class="text-white border font-medium rounded-3xl border-gray-300 py-[16px] px-[48px] hover:bg-white hover:text-black"
+              >
+                Contact us
+              </button>
+            </router-link>
+          </div>
         </div>
       </div>
     </div>
@@ -87,6 +121,13 @@
 </template>
 
 <script setup>
+import { ref } from "vue";
+
+const isMenuOpen = ref(false);
+
+const toggleMenu = () => {
+  isMenuOpen.value = !isMenuOpen.value;
+};
 </script>
 
 <style lang="scss" scoped></style>

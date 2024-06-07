@@ -53,12 +53,14 @@
 
   <section>
     <div class="container">
-      <div class="flex justify-between mt-[45px] md:mt-[57px] mb-[64px]">
+      <div
+        class="flex flex-col md:flex-row justify-between mt-[45px] md:mt-[57px] mb-[64px]"
+      >
         <div>
           <h2 class="text-4xl font-semibold">View our projects</h2>
         </div>
         <div
-          class="flex items-center gap-2 text-primary font-medium cursor-pointer"
+          class="flex items-center gap-2 text-primary font-medium cursor-pointer mt-4 md:mt-0"
         >
           <h3 class="text-lg">View More</h3>
           <span>
@@ -76,15 +78,17 @@
           </span>
         </div>
       </div>
-      <div class="grid md:grid-cols-3 gap-5 mt-8">
-        <div class="col-span-2 row-span-2 relative overflow-hidden group">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mt-8">
+        <div
+          class="col-span-1 md:col-span-2 row-span-2 relative overflow-hidden group"
+        >
           <div
-            class="w-1/2 absolute top-0 duration-300 group-hover:left-0 -left-full h-full bg-gradient-to-br from-[#1C1E536B]/40 to-[#1C1E53] px-8 pt-[350px]"
+            class="w-1/2 absolute top-0 duration-300 group-hover:left-0 -left-full h-full bg-gradient-to-br from-[#1C1E536B]/40 to-[#1C1E53] px-8 pt-[30px] md:pt-[200px] text-xs"
           >
-            <h2 class="text-3xl font-semibold text-white w-[340px]">
+            <h2 class="md:text-3xl font-semibold   text-white w-[340px]">
               Workhub office Webflow Webflow Design
             </h2>
-            <p class="text-[16px] text-white mt-[16px] mb-[40px]">
+            <p class="text-[16px] text-white mt-[16px] mb-[40px]"> 
               Euismod faucibus turpis eu gravida mi. Pellentesque et velit
               aliquam
             </p>
@@ -115,7 +119,7 @@
         </div>
         <div class="col-span-1 relative overflow-hidden group">
           <div
-            class="w-full absolute top-0 duration-300 group-hover:left-0 -left-full h-full bg-gradient-to-br from-[#1C1E536B]/40 to-[#1C1E53] px-8 pt-[138px]"
+            class="w-full absolute top-0 duration-300 group-hover:left-0 -left-full h-full bg-gradient-to-br from-[#1C1E536B]/40 to-[#1C1E53] px-8 pt-[108px] md:pt-[100px]"
           >
             <h2 class="text-3xl font-semibold text-white w-[320px]">
               Unisaas Website Design
@@ -147,7 +151,7 @@
         </div>
         <div class="col-span-1 relative overflow-hidden group">
           <div
-            class="w-full absolute top-0 duration-300 group-hover:left-0 -left-full h-full bg-gradient-to-br from-[#1C1E536B]/40 to-[#1C1E53] px-8 pt-[138px]"
+            class="w-full absolute top-0 duration-300 group-hover:left-0 -left-full h-full bg-gradient-to-br from-[#1C1E536B]/40 to-[#1C1E53] px-8 pt-[138px] md:pt-[100px]"
           >
             <h2
               class="text-3xl font-semibold text-white justify-center w-[320px]"
@@ -186,11 +190,8 @@
   <!-- ===================================== Cards ================================================= -->
 
   <section>
-    <div
-      id="app"
-      class="bg-[#F4F6FC] pb-32 "
-    >
-      <div class="container mt-[60px] md:mt-[120px] ">
+    <div id="app" class="bg-[#F4F6FC] pb-32">
+      <div class="container mt-[60px] md:mt-[120px]">
         <h3 class="text-xl font-semibold mb-2 pt-14 text-center">Features</h3>
         <h2
           class="text-[48px] font-bold text-center max-w-[610px] mx-auto mb-14"
@@ -201,7 +202,7 @@
           <div
             v-for="(item, index) in items"
             :key="index"
-            class="feature-item pl-10 border border-gray-300 h-[306px] flex-col items-center justify-between hover:shadow-md hover:shadow-slate-400"
+            class="feature-item pl-10 border bg-white border-white h-[336px] flex-col items-center justify-between hover:shadow-md hover:shadow-slate-400"
           >
             <img class="mt-8" :src="item.icon" alt="" />
             <div class="mt-12 w-[324px]">
@@ -218,12 +219,16 @@
 
   <!-- clients -->
 
-  <section></section>
+  <section>
+    <Testimonials />
+  </section>
 
   <router-link to="/"></router-link>
 </template>
 
 <script setup>
+import Testimonials from "../components/Testimonials.vue";
+
 const items = [
   {
     icon: "../src/assets/icons.png",
