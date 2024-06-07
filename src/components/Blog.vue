@@ -4,7 +4,7 @@
       <div
         v-for="item in items"
         :key="item.id"
-        class="bg-white p-5 py-3 rounded shadow hover:shadow-md"
+        class="bg-white p-5 py-3 rounded shadow hover:shadow-md hover:shadow-slate-500"
       >
         <img :src="item.image" alt="image" class="w-full mb-4" />
         <p class="text-gray-500">{{ item.date }}</p>

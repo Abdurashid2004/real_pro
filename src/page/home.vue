@@ -12,10 +12,12 @@
           Lorem ipsum dolor sit, consectetur adipiscing elit. Lorem ipsum dolor
           sit, consectetur adipiscing elit. Eiusmod tempor incididunt.
         </p>
-        <div class="pt-6 lg:pt-12 flex flex-col lg:flex-row gap-4">
+        <div
+          class="pt-6 lg:pt-14 flex lg:flex-row md:gap-4 max-md:justify-between"
+        >
           <router-link to="/work">
             <button
-              class="font-medium rounded-3xl py-3 lg:py-4 px-8 lg:px-10 bg-[#FCD980] text-[#1B1C2B] hover:text-white transition duration-300 ease-in-out"
+              class="font-medium rounded-3xl px-10 py-3 lg:py-4 lg:px-10 bg-[#FCD980] text-[#1B1C2B] hover:text-white transition duration-300 ease-in-out"
             >
               View our work
             </button>
@@ -51,7 +53,7 @@
 
   <section>
     <div class="container">
-      <div class="flex justify-between mt-[57px] mb-[64px]">
+      <div class="flex justify-between mt-[45px] md:mt-[57px] mb-[64px]">
         <div>
           <h2 class="text-4xl font-semibold">View our projects</h2>
         </div>
@@ -184,11 +186,14 @@
   <!-- ===================================== Cards ================================================= -->
 
   <section>
-    <div id="app" class="bg-[#F4F6FC] pb-32">
-      <div class="container mt-[120px]">
-        <h3 class="text-xl font-semibold mb-2 pt-24 text-center">Features</h3>
+    <div
+      id="app"
+      class="bg-[#F4F6FC] pb-32 "
+    >
+      <div class="container mt-[60px] md:mt-[120px] ">
+        <h3 class="text-xl font-semibold mb-2 pt-14 text-center">Features</h3>
         <h2
-          class="text-[48px] font-bold text-center max-w-[610px] mx-auto mb-20"
+          class="text-[48px] font-bold text-center max-w-[610px] mx-auto mb-14"
         >
           Design that solves problems, one product at a time
         </h2>
@@ -196,7 +201,7 @@
           <div
             v-for="(item, index) in items"
             :key="index"
-            class="feature-item pl-10 border border-gray-300 h-[306px] flex-col items-center justify-between"
+            class="feature-item pl-10 border border-gray-300 h-[306px] flex-col items-center justify-between hover:shadow-md hover:shadow-slate-400"
           >
             <img class="mt-8" :src="item.icon" alt="" />
             <div class="mt-12 w-[324px]">
@@ -213,80 +218,7 @@
 
   <!-- clients -->
 
-  <section>
-    <div class="container">
-      <div
-        class="mt-12 md:mt-24 lg:mt-24 mb-16 md:mb-32 px-4 text-center md:text-start"
-      >
-        <div class="flex flex-col md:flex-row justify-between items-start">
-          <div class="md:w-1/3 lg:w-1/4 mb-8 md:mb-0">
-            <h2 class="text-3xl md:text-4xl font-semibold pb-4">
-              What our clients say about us
-            </h2>
-            <p class="opacity-70">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.
-              consectetur adipiscing elit sed.
-            </p>
-          </div>
-          <div class="md:w-2/3 lg:w-3/4 max-w-[663px]">
-            <h2 class="text-2xl md:text-3xl pb-6 md:pb-12">
-              "The best agency we’ve worked with so far. They understand our
-              product and are able to add new features with a great focus."
-            </h2>
-            <div
-              class="flex flex-col md:flex-row items-start md:items-center justify-between"
-            >
-              <div class="flex items-center gap-4 mb-6 md:mb-0">
-                <img
-                  src="../assets/opa.png"
-                  alt="Client Image"
-                  class="w-12 h-12"
-                />
-                <div class="text-primary">
-                  <h3 class="text-lg md:text-xl">Jenny Wilson</h3>
-                  <p class="text-sm">Vice President</p>
-                </div>
-              </div>
-              <div class="flex gap-4 items-center cursor-pointer">
-                <a href="" class="float-right p-2 ml-80">
-                  <svg
-                    width="13"
-                    height="22"
-                    viewBox="0 0 13 22"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      opacity="0.6"
-                      d="M11.5859 0L13 3.21951L3.96947 10.9106L13 18.7805L11.5859 22L0 11.626V9.8374L11.5859 0Z"
-                      fill="#282938"
-                    />
-                  </svg>
-                </a>
-                <a
-                  href="next_page.html"
-                  class="right py-2 px-3 bg-[#5239FA] rounded-full"
-                >
-                  <svg
-                    width="13"
-                    height="22"
-                    viewBox="0 0 13 22"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M1.41412 22L0 18.7805L9.03053 11.0894L0 3.21951L1.41412 0L13 10.374V12.1626L1.41412 22Z"
-                      fill="white"
-                    />
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <section></section>
 
   <router-link to="/"></router-link>
 </template>

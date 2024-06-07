@@ -1,5 +1,5 @@
 <template>
-  <div class="container mt-56">
+  <div class="container mt-36 md:mt-52">
     <div
       class="max-w-lg mx-auto text-center px-4 md:max-w-none md:w-3/4 lg:w-5/12 xl:w-1/2"
     >
@@ -10,7 +10,7 @@
       </p>
     </div>
 
-    <div class="max-w-4xl container mb-32 px-4">
+    <div class="max-w-4xl container mb-16 md:mb-24 px-4">
       <div class="p-6 bg-[#F4F6FC] rounded-lg shadow-md">
         <form action="#" class="space-y-6">
           <div class="flex flex-wrap -mx-3">
@@ -22,10 +22,11 @@
                 Name
               </label>
               <input
-                class="block w-full bg-white text-gray-700 border border-gray-300 rounded py-3 px-4 leading-tight outline-none focus:bg-white focus:border-gray-500"
+                class="block w-full bg-white text-gray-700 border border-gray-300 rounded py-3 px-4 leading-tight outline-none focus:bg-white "
                 id="name"
                 type="text"
                 placeholder="Enter your name"
+                required
               />
             </div>
             <div class="w-full md:w-1/2 px-3">
@@ -36,10 +37,11 @@
                 Email
               </label>
               <input
-                class="appearance-none block w-full bg-white text-gray-700 border border-gray-300 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                class="appearance-none block w-full bg-white text-gray-700 border border-gray-300 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white "
                 id="email"
                 type="email"
                 placeholder="Enter your Email"
+                required
               />
             </div>
           </div>
@@ -52,10 +54,11 @@
                 Subject
               </label>
               <input
-                class="appearance-none block w-full bg-white text-gray-700 border border-gray-300 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                class="appearance-none block w-full bg-white text-gray-700 border border-gray-300 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white "
                 id="subject1"
                 type="text"
                 placeholder="Provide context"
+                required
               />
             </div>
             <div class="w-full md:w-1/2 px-3">
@@ -66,10 +69,11 @@
                 Subject
               </label>
               <input
-                class="appearance-none block w-full bg-white text-gray-700 border border-gray-300 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                class="appearance-none block w-full bg-white text-gray-700 border border-gray-300 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white"
                 id="subject2"
                 type="text"
                 placeholder="Select Subject"
+                required
               />
             </div>
           </div>
@@ -83,7 +87,7 @@
               </label>
               <textarea
                 style="resize: none"
-                class="block w-full bg-white text-gray-700 border border-gray-300 rounded py-3 px-4 outline-none focus:bg-white focus:border-gray-500"
+                class="block w-full bg-white text-gray-700 border rounded py-3 px-4 outline-none focus:bg-white"
                 id="message"
                 rows="5"
                 placeholder="Write your question here"
